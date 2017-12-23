@@ -15,7 +15,7 @@ defmodule Ueberauth.Strategy.Tumblr.OAuth do
   @defaults [access_token: "/oauth/access_token",
              authorize_url: "/oauth/authorize",
              request_token: "/oauth/request_token",
-             site: "https://tumblr.com"]
+             site: "https://www.tumblr.com"]
 
   def access_token({token, token_secret}, verifier, opts \\ []) do
     opts
