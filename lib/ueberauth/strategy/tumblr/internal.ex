@@ -5,8 +5,8 @@ defmodule Ueberauth.Strategy.Tumblr.OAuth.Internal do
 
   def get(url, extraparams, {consumer_key, consumer_secret, _}, token \\ "", token_secret \\ "") do
     creds = OAuther.credentials(
-      consumer_key: consumer_key,
-      consumer_secret: consumer_secret,
+      consumer_key: client.consumer_key,
+      consumer_secret: client.consumer_secret,
       token: token,
       token_secret: token_secret
     )
