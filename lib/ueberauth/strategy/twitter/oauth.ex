@@ -15,7 +15,7 @@ defmodule Ueberauth.Strategy.Twitter.OAuth do
   @defaults [access_token: "/oauth/access_token",
              authorize_url: "/oauth/authorize",
              request_token: "/oauth/request_token",
-             site: "https://api.twitter.com"]
+             site: "https://api.tumblr.com"]
 
   def access_token({token, token_secret}, verifier, opts \\ []) do
     opts
