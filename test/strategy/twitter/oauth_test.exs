@@ -1,7 +1,7 @@
-defmodule Ueberauth.Strategy.Twitter.OAuthTest do
+defmodule Ueberauth.Strategy.Tumblr.OAuthTest do
   use ExUnit.Case, async: true
 
-  alias Ueberauth.Strategy.Twitter.OAuth
+  alias Ueberauth.Strategy.Tumblr.OAuth
 
   setup do
     Application.put_env :ueberauth, OAuth,
@@ -18,7 +18,7 @@ defmodule Ueberauth.Strategy.Twitter.OAuthTest do
 
   test "access_token!/2 raises an appropriate error on network failure" do
     assert_raise RuntimeError, ~r/nxdomain/i, fn ->
-      OAuth.access_token! {"token", "secret"}, "verifier", site: "https://bogusapi.twitter.com"
+      OAuth.access_token! {"token", "secret"}, "verifier", site: "https://bogusapi.tumblr.com"
     end
   end
 
@@ -30,7 +30,7 @@ defmodule Ueberauth.Strategy.Twitter.OAuthTest do
 
   test "request_token!/2: raises an appropriate error on network failure" do
     assert_raise RuntimeError, ~r/nxdomain/i, fn ->
-      OAuth.request_token! [], site: "https://bogusapi.twitter.com", redirect_uri: "some/uri"
+      OAuth.request_token! [], site: "https://bogusapi.tumblr.com", redirect_uri: "some/uri"
     end
   end
 end

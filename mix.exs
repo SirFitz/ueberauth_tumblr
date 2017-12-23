@@ -1,13 +1,13 @@
-defmodule UeberauthTwitter.Mixfile do
+defmodule UeberauthTumblr.Mixfile do
   use Mix.Project
 
   @version "0.2.4"
-  @url "https://github.com/ueberauth/ueberauth_twitter"
+  @url "https://github.com/sirfitz/ueberauth_tumblr"
 
   def project do
-    [app: :ueberauth_twitter,
+    [app: :ueberauth_tumblr,
      version: @version,
-     name: "Ueberauth Twitter Strategy",
+     name: "Ueberauth Tumblr Strategy",
      package: package(),
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
@@ -46,7 +46,7 @@ defmodule UeberauthTwitter.Mixfile do
   end
 
   defp description do
-    "An Uberauth strategy for Twitter authentication."
+    "An Uberauth strategy for Tumblr authentication."
   end
 
   defp package do

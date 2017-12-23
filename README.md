@@ -1,18 +1,18 @@
-# Überauth Twitter
+# Überauth Tumblr
 
-> Twitter strategy for Überauth.
+> Tumblr strategy for Überauth.
 
 _Note_: Sessions are required for this strategy.
 
 ## Installation
 
-1. Setup your application at [Twitter Developers](https://dev.twitter.com/).
+1. Setup your application at [Tumblr Developers](https://dev.tumblr.com/).
 
-1. Add `:ueberauth_twitter` to your list of dependencies in `mix.exs`:
+1. Add `:ueberauth_tumblr` to your list of dependencies in `mix.exs`:
 
     ```elixir
     def deps do
-      [{:ueberauth_twitter, "~> 0.2"},
+      [{:ueberauth_tumblr, "~> 0.2"},
        {:oauth, github: "tim/erlang-oauth"}]
     end
     ```
@@ -21,23 +21,23 @@ _Note_: Sessions are required for this strategy.
 
     ```elixir
     def application do
-      [applications: [:ueberauth_twitter]]
+      [applications: [:ueberauth_tumblr]]
     end
     ```
 
-1. Add Twitter to your Überauth configuration:
+1. Add Tumblr to your Überauth configuration:
 
     ```elixir
     config :ueberauth, Ueberauth,
       providers: [
-        twitter: {Ueberauth.Strategy.Twitter, []}
+        tumblr: {Ueberauth.Strategy.Tumblr, []}
       ]
     ```
 
 1.  Update your provider configuration:
 
     ```elixir
-    config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
+    config :ueberauth, Ueberauth.Strategy.Tumblr.OAuth,
       consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
       consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET")
     ```
@@ -71,9 +71,9 @@ For an example implementation see the [Überauth Example](https://github.com/ueb
 
 Depending on the configured url you can initiate the request through:
 
-    /auth/twitter
+    /auth/tumblr
 
 ## License
 
-Please see [LICENSE](https://github.com/ueberauth/ueberauth_twitter/blob/master/LICENSE) for licensing details.
+Please see [LICENSE](https://github.com/ueberauth/ueberauth_tumblr/blob/master/LICENSE) for licensing details.
 

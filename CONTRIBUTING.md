@@ -1,11 +1,11 @@
-# Contributing to Ueberauth Twitter
+# Contributing to Ueberauth Tumblr
 
 ## Pull Requests Welcome
-1. Fork ueberauth_twitter
+1. Fork ueberauth_tumblr
 2. Create a topic branch
 3. Make logically-grouped commits with clear commit messages
 4. Push commits to your fork
-5. Open a pull request against ueberauth_twitter/master
+5. Open a pull request against ueberauth_tumblr/master
 
 ## Issues
 

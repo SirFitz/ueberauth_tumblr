@@ -1,16 +1,16 @@
-defmodule Ueberauth.Strategy.Twitter.OAuth do
+defmodule Ueberauth.Strategy.Tumblr.OAuth do
   @moduledoc """
-  OAuth1 for Twitter.
+  OAuth1 for Tumblr.
 
   Add `consumer_key` and `consumer_secret` to your configuration:
 
-  config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
+  config :ueberauth, Ueberauth.Strategy.Tumblr.OAuth,
     consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
     consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET"),
     redirect_uri: System.get_env("TWITTER_REDIRECT_URI")
   """
 
-  alias Ueberauth.Strategy.Twitter.OAuth.Internal
+  alias Ueberauth.Strategy.Tumblr.OAuth.Internal
 
   @defaults [access_token: "/oauth/access_token",
              authorize_url: "/oauth/authorize",

@@ -22,4 +22,4 @@
 
 # v 0.1.0
 
-* Initial Twitter OAuth strategy
+* Initial Tumblr OAuth strategy
