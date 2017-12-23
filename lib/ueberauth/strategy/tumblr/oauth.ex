@@ -15,7 +15,7 @@ defmodule Ueberauth.Strategy.Tumblr.OAuth do
   @defaults [access_token: "/oauth/access_token",
              authorize_url: "/oauth/authorize",
              request_token: "/oauth/request_token",
-             site: "https://api.tumblr.com"]
+             site: "https://tumblr.com"]
 
   def access_token({token, token_secret}, verifier, opts \\ []) do
     opts
@@ -42,9 +42,7 @@ defmodule Ueberauth.Strategy.Tumblr.OAuth do
     config = Application.get_env(:ueberauth, __MODULE__)
 
     @defaults
-    |> Keyword.merge(config)
-    |> Keyword.merge(opts)
-    |> Enum.into(%{})
+    |> Keyword.merge(config) |> Keyword.merge(opts) |> Enum.into(%{})
   end
 
   def get(url, access_token), do: get(url, [], access_token)
