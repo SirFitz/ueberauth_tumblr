@@ -24,9 +24,9 @@ defmodule Ueberauth.Strategy.Tumblr do
   @doc """
   Handles the callback from Tumblr.
   """
-  def handle_callback!(%Plug.Conn{params: %{"oauth_verifier" => oauth_verifier}} = conn) do
-    token = get_session(conn, :tumblr_token)
-    case Tumblr.OAuth.access_token(token, oauth_verifier) do
+  def handle_callback!(%Plug.Conn{params: %{"oauth_token" => oauth_token, "oauth_token_secret" => oauth_token_secret}} = conn) do
+    #token = get_session(conn, :tumblr_token)
+    case Tumblr.OAuth.access_token(oauth_token, oauth_token_secret) do
       {:ok, access_token} -> fetch_user(conn, access_token)
       {:error, error} -> set_errors!(conn, [error(error.code, error.reason)])
     end

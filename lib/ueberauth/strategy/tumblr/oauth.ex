@@ -21,7 +21,7 @@ defmodule Ueberauth.Strategy.Tumblr.OAuth do
     opts
     |> client
     |> to_url(:access_token)
-    |> Internal.get([{"oauth_verifier", verifier}], consumer(client()), token, token_secret)
+    |> Internal.get([{"token", token},{"token_secret", token_secret}], consumer(client()), token, token_secret)
     |> decode_response
   end
 
